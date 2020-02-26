@@ -7,9 +7,14 @@
 7. Online link in the beginning      
 8. Remove the words "I"        
 9. Do not describe how great you are      
-10. Include action words describing what did you do and what was the result                      
+10. Include action words describing what did you do and what was the result        
+11. Do not describe responsibility and describe the impact        
+                              
 
-<img src="Resume.png" alt="Resume" style="zoom:50%;" />        
+<img src="Lecture1 Resume.png" alt="Resume" style="zoom:50%;" /> 
+<img src="Lecture1 WorkingResume.png" alt="Resume" style="zoom:50%;" />           
+
+        
       
         
        
