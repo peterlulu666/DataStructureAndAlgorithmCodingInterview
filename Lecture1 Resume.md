@@ -14,8 +14,8 @@
         
                               
 
-<img src="Lecture1 Resume.png" alt="Resume" style="zoom:50%;" /> 
-<img src="Lecture1 WorkingResume.png" alt="Resume" style="zoom:50%;" />           
+<img src="assets/Lecture1 Resume.png" alt="Resume" style="zoom:50%;" /> 
+<img src="assets/Lecture1 WorkingResume.png" alt="Resume" style="zoom:50%;" />           
 
         
       

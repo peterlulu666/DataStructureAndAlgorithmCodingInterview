@@ -1,4 +1,4 @@
-<img src="BigO.svg" alt="Big O" style="zoom:50%;" />      
+<img src="assets/BigO.svg" alt="Big O" style="zoom:50%;" />      
 
 
 
