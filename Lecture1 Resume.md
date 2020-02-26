@@ -8,7 +8,10 @@
 8. Remove the words "I"        
 9. Do not describe how great you are      
 10. Include action words describing what did you do and what was the result        
-11. Do not describe responsibility and describe the impact        
+11. Do not describe responsibility and describe the impact      
+12. Include years of experiences      
+13. contain experience, project, education, technical skills        
+        
                               
 
 <img src="Lecture1 Resume.png" alt="Resume" style="zoom:50%;" /> 
