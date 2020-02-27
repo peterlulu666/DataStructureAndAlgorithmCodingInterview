@@ -16,7 +16,7 @@
 // Compare 'c' with 'u'
 // Compare 'c' with 'c'
 // Time complexity is O(n^2)
-function duplicateItem(){
+function duplicateItem() {
     const arrayOne = ['a', 'b', 'c'];
     const arrayTwo = ['x', 'u', 'c'];
     var isDuplicate = false;
@@ -30,11 +30,10 @@ function duplicateItem(){
         }
 
     }
-    if (isDuplicate){
+    if (isDuplicate) {
         console.log("Found item");
 
-    }
-    else {
+    } else {
         console.log("There is no duplicated item.");
 
     }
@@ -50,30 +49,29 @@ duplicateItem();
 // Check hashMap['u'] is true or false
 // Check hashMap['c'] is true or false
 // Time complexity is O(n)
-function duplicateElement(){
+function duplicateElement() {
     const arrayOne = ['a', 'b', 'c'];
     const arrayTwo = ['x', 'y', 'z'];
     var hashMap = {};
     var isDuplicate = false;
     for (let i = 0; i < arrayOne.length; i++) {
-        if (hashMap[arrayOne[i]] !== null){
+        if (!(arrayOne[i] in hashMap)) {
             hashMap[arrayOne[i]] = true;
 
         }
 
     }
     for (let i = 0; i < arrayTwo.length; i++) {
-        if (arrayTwo[i] in hashMap){
+        if (arrayTwo[i] in hashMap) {
             isDuplicate = true;
 
         }
 
     }
-    if (isDuplicate){
+    if (isDuplicate) {
         console.log("Found item");
 
-    }
-    else {
+    } else {
         console.log("There is no duplicated item.");
 
     }
