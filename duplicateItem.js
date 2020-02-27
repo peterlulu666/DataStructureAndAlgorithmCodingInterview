@@ -61,6 +61,11 @@ function duplicateElement() {
 
         }
 
+        // if (!hashMap[i]) {
+        //     hashMap[arrayOne[i]] = true;
+        //
+        // }
+
     }
     for (let i = 0; i < arrayTwo.length; i++) {
         // Check key in hashMap
