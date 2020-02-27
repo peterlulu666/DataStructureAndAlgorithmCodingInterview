@@ -55,6 +55,7 @@ function duplicateElement() {
     var hashMap = {};
     var isDuplicate = false;
     for (let i = 0; i < arrayOne.length; i++) {
+        // Check key in hashMap
         if (!(arrayOne[i] in hashMap)) {
             hashMap[arrayOne[i]] = true;
 
@@ -62,6 +63,7 @@ function duplicateElement() {
 
     }
     for (let i = 0; i < arrayTwo.length; i++) {
+        // Check key in hashMap
         if (arrayTwo[i] in hashMap) {
             isDuplicate = true;
 
