@@ -54,25 +54,29 @@ function duplicateElement() {
     const arrayTwo = ['x', 'y', 'z'];
     var hashMap = {};
     var isDuplicate = false;
-    for (let i = 0; i < arrayOne.length; i++) {
+    for (let arrayOneIndex = 0; arrayOneIndex < arrayOne.length; arrayOneIndex++) {
         // Check key in hashMap
-        if (!(arrayOne[i] in hashMap)) {
-            hashMap[arrayOne[i]] = true;
+        if (!(arrayOne[arrayOneIndex] in hashMap)) {
+            hashMap[arrayOne[arrayOneIndex]] = true;
 
         }
 
-        // if (!hashMap[i]) {
-        //     hashMap[arrayOne[i]] = true;
+        // if (!hashMap[arrayOneIndex]) {
+        //     hashMap[arrayOne[arrayOneIndex]] = true;
         //
         // }
 
     }
-    for (let i = 0; i < arrayTwo.length; i++) {
+    for (let arrayTwoIndex = 0; arrayTwoIndex < arrayTwo.length; arrayTwoIndex++) {
         // Check key in hashMap
-        if (arrayTwo[i] in hashMap) {
+        if (arrayTwo[arrayTwoIndex] in hashMap) {
             isDuplicate = true;
 
         }
+        // if (hashMap[arrayTwo[arrayTwoIndex]]){
+        //     isDuplicate = true;
+        //
+        // }
 
     }
     if (isDuplicate) {
