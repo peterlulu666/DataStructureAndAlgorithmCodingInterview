@@ -16,7 +16,7 @@
 // Compare 'c' with 'u'
 // Compare 'c' with 'c'
 // Time complexity is O(n^2)
-function lecture3DuplicateItem() {
+function duplicateItem() {
     const arrayOne = ['a', 'b', 'c'];
     const arrayTwo = ['x', 'u', 'c'];
     var isDuplicate = false;
@@ -40,7 +40,7 @@ function lecture3DuplicateItem() {
 
 }
 
-lecture3DuplicateItem();
+duplicateItem();
 
 // Create a hashMap
 // 'a' 'b' 'c' are the key
