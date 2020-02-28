@@ -91,6 +91,17 @@ function duplicateElement() {
 
 duplicateElement();
 
+function findDuplicate() {
+    const arrayOne = ['a', 'b', 'c'];
+    const arrayTwo = ['x', 'y', 'z'];
+    return arrayOne.some(item => arrayTwo.includes(item))
+
+}
+
+console.log(findDuplicate());
+
+
+
 
 
 
