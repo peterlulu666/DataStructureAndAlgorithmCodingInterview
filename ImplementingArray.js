@@ -5,6 +5,12 @@ class ImplementingArray {
 
     }
 
+    // get the data
+    get(index) {
+        return this.array[index];
+
+    }
+
     // Add last
     // O(1)
     addLast(data) {
@@ -80,11 +86,55 @@ class ImplementingArray {
 
     }
 
+    remove(index) {
+        // If the currentSize is 0, return null
+        if (this.currentSize === 0) {
+            return null;
+
+        }
+
+        // If the index < 0 or index >= currentSize
+        if (index < 0 || index >= this.currentSize) {
+            console.log("Index out of range.");
+            return null;
+
+        }
+
+        // If there is only one data
+        // If the index is the last index
+        // Remove the last data
+        if (index === this.currentSize - 1) {
+            return this.removeLast();
+
+        }
+
+        // Remove the first data
+        // Remove the middle data
+        // Store the data at index to removedData
+        var removedData = this.array[index];
+        // Copy data at index to index - 1
+        for (let i = index + 1; i <= this.currentSize - 1; i++) {
+            this.array[i - 1] = this.array[i];
+
+        }
+
+        // Delete the last data
+        delete this.array[this.currentSize - 1];
+
+        // Decrement the currentSize
+        this.currentSize--;
+
+        // return the removedData
+        return removedData;
+
+    }
+
 }
 
 var implementingArray = new ImplementingArray();
 implementingArray.addLast("Computer");
 implementingArray.addLast("Science");
+console.log(implementingArray.get(0));
 console.log(implementingArray.array);
 console.log(implementingArray.removeLast());
 implementingArray.addLast("Student");
@@ -93,12 +143,5 @@ implementingArray.addFirst("Coding");
 console.log(implementingArray.array);
 console.log(implementingArray.removeFirst());
 console.log(implementingArray.array);
-
-
-
-
-
-
-
-
-
+console.log(implementingArray.remove(1));
+console.log(implementingArray.array);
