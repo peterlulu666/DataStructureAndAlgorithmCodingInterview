@@ -1,4 +1,4 @@
-class ImplementingArray {
+class Lecture6ImplementingArray {
     constructor() {
         this.currentSize = 0;
         this.array = {};
@@ -131,7 +131,7 @@ class ImplementingArray {
 
 }
 
-var implementingArray = new ImplementingArray();
+var implementingArray = new Lecture6ImplementingArray();
 implementingArray.addLast("Computer");
 implementingArray.addLast("Science");
 console.log(implementingArray.get(0));
