@@ -117,6 +117,48 @@ function mergeSortedArray(arrayOne, arrayTwo) {
 
 }
 
+// If arrayOne is empty return arrayTwo
+// If arrayTow is empty return arrayOne
+// Increment index in arrayOne or arrayTwo
+function mergeSortedArr(arrayOne, arrayTwo) {
+    var arrayOne = [];
+    var arrayTwo = [];
+    // If arrayOne is empty
+    if (arrayOne.length === 0) {
+        return arrayTwo;
+
+    }
+    // If arrayTwo is empty
+    if (arrayTwo.length === 0) {
+        return arrayOne;
+
+    }
+
+    var arrayOneIndex = 0;
+    var arrayTwoIndex = 0;
+    var arrayOneData = arrayOne[arrayOneIndex];
+    var arrayTwoData = arrayTwo[arrayTwoIndex];
+    var mergedArray = [];
+    // If all the data in arrayOne have been added to the mergedArray
+    // If all the data in arrayTwo have been added to the mergedArray
+    // 1 4 push 1 to mergedArray
+    // 2 4 push 2 to mergedArray
+    // 3 4 push 3 to mergedArray
+    // undefined 4 push 4 to mergedArray
+    // undefined 5 push 5 to mergedArray
+    // undefined 6 push 6 to mergedArray
+    // undefined undefined
+    while (true) {
+        if (arrayOneData === undefined && arrayTwoData === undefined) {
+            break;
+
+        }
+
+
+    }
+
+}
+
 console.log(mergeArray(arrayOne, arrayTwo));
 console.log(mergeSortedArray(arrayThree, arrayFour));
 
