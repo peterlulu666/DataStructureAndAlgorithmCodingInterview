@@ -210,6 +210,7 @@ function mergeSortedArr(arrayOne, arrayTwo) {
         }
 
         // If all the data in arrayOne have been added to the mergedArray and arrayTwo has more data
+        // arrayOneData will be undefined and arrayTwoData is a valid number
         else if (arrayOneData === undefined && arrayTwoData !== undefined) {
             // Add arrayTwoData to mergedArray
             mergedArray.push(arrayTwoData);
@@ -221,6 +222,7 @@ function mergeSortedArr(arrayOne, arrayTwo) {
 
         }
         // If all the data in arrayTwo have been added to the mergedArray and arrayOne has more data
+        // arrayTwoData will be undefined and arrayOneData is a valid number
         else if (arrayTwoData === undefined && arrayOneData !== undefined) {
             // Add arrayOneData to mergedArray
             mergedArray.push(arrayOneData);
