@@ -16,6 +16,8 @@ var arrayOne = [1, 2, 3];
 var arrayTwo = [1, 3, 5];
 var arrayThree = [1, 2, 3];
 var arrayFour = [4, 5, 6, 10, 11, 12];
+var arrayFive = [1, 2, 3];
+var arraySix = [3, 6, 9, 11, 12];
 
 function mergeArray(arrayOne, arrayTwo) {
     var mergedArray = [];
@@ -78,21 +80,33 @@ function mergeSortedArray(arrayOne, arrayTwo) {
     var mergedArray = [];
     while (arrayOneData !== undefined && arrayTwoData !== undefined) {
         if (arrayOneData === arrayTwoData) {
+            // Add arrayOneData to mergedArray
             mergedArray.push(arrayOneData);
+            // Increment arrayOneIndex
             arrayOneIndex++;
+            // Update arrayOneData
             arrayOneData = arrayOne[arrayOneIndex];
+            // Add arrayTwoData to mergedArray
             mergedArray.push(arrayTwoData);
+            // Increment arrayTwoIndex
             arrayTwoIndex++;
+            // Update arrayTwoData
             arrayTwoData = arrayTwo[arrayTwoIndex];
 
         } else if (arrayOneData < arrayTwoData) {
+            // Add arrayOneData to mergedArray
             mergedArray.push(arrayOneData);
+            // Increment arrayOneIndex
             arrayOneIndex++;
+            // Update arrayOneData
             arrayOneData = arrayOne[arrayOneIndex];
 
         } else {
+            // Add arrayTwoData to mergedArray
             mergedArray.push(arrayTwoData);
+            // Increment arrayTwoIndex
             arrayTwoIndex++;
+            // Update arrayTwoData
             arrayTwoData = arrayTwo[arrayTwoIndex];
 
         }
@@ -121,8 +135,6 @@ function mergeSortedArray(arrayOne, arrayTwo) {
 // If arrayTow is empty return arrayOne
 // Increment index in arrayOne or arrayTwo
 function mergeSortedArr(arrayOne, arrayTwo) {
-    var arrayOne = [];
-    var arrayTwo = [];
     // If arrayOne is empty
     if (arrayOne.length === 0) {
         return arrayTwo;
@@ -148,29 +160,85 @@ function mergeSortedArr(arrayOne, arrayTwo) {
     // undefined 5 push 5 to mergedArray
     // undefined 6 push 6 to mergedArray
     // undefined undefined
-    while (true) {
-        if (arrayOneData === undefined && arrayTwoData === undefined) {
-            break;
+    // If arrayOneData is a valid number arrayTwoData can be a valid number or undefined
+    // If arrayTwoData is a valid number arrayOneData can be a valid number or undefined
+    // The arrayOneData is a valid number or arrayTwoData is a valid number compare arrayOneData with arrayTwoData
+    while (arrayOneData !== undefined || arrayTwoData !== undefined) {
+        // // If arrayOneData is undefined and arrayTwoData is undefined jump out the while loop
+        // if (arrayOneData === undefined && arrayTwoData === undefined) {
+        //     break;
+        //
+        // }
+
+        // If arrayOneData is equal to arrayTwoData
+        if (arrayOneData === arrayTwoData) {
+            // Add arrayOneData to mergedArray
+            mergedArray.push(arrayOneData);
+            // Increment arrayOneIndex
+            arrayOneIndex++;
+            // Update arrayOneData
+            arrayOneData = arrayOne[arrayOneIndex];
+            // Add arrayTwoData to mergedArray
+            mergedArray.push(arrayTwoData);
+            // Increment arrayTwoIndex
+            arrayTwoIndex++;
+            // Update arrayTwoData
+            arrayTwoData = arrayTwo[arrayTwoIndex];
 
         }
 
+        // If arrayOneData is smaller than arrayTwoData
+        else if (arrayOneData < arrayTwoData) {
+            // Add arrayOneData to mergedArray
+            mergedArray.push(arrayOneData);
+            // Increment arrayOneIndex
+            arrayOneIndex++;
+            // Update arrayOneData
+            arrayOneData = arrayOne[arrayOneIndex];
+
+        }
+
+        // If arrayOneData is greater than arrayTwoData
+        else if (arrayOneData > arrayTwoData) {
+            // Add arrayTwoData to mergedArray
+            mergedArray.push(arrayTwoData);
+            // Increment arrayTwoIndex
+            arrayTwoIndex++;
+            // Update arrayTwoData
+            arrayTwoData = arrayTwo[arrayTwoIndex];
+
+        }
+
+        // If all the data in arrayOne have been added to the mergedArray and arrayTwo has more data
+        else if (arrayOneData === undefined && arrayTwoData !== undefined) {
+            // Add arrayTwoData to mergedArray
+            mergedArray.push(arrayTwoData);
+            // Increment arrayTwoIndex
+            arrayTwoIndex++;
+            // Update arrayTwoData
+            arrayTwoData = arrayTwo[arrayTwoIndex];
+
+
+        }
+        // If all the data in arrayTwo have been added to the mergedArray and arrayOne has more data
+        else if (arrayTwoData === undefined && arrayOneData !== undefined) {
+            // Add arrayOneData to mergedArray
+            mergedArray.push(arrayOneData);
+            // Increment arrayOneIndex
+            arrayOneIndex++;
+            // Update arrayOneData
+            arrayOneData = arrayOne[arrayOneIndex];
+
+        }
 
     }
+
+    // Return mergedArray
+    return mergedArray;
 
 }
 
 console.log(mergeArray(arrayOne, arrayTwo));
 console.log(mergeSortedArray(arrayThree, arrayFour));
-
-
-
-
-
-
-
-
-
-
-
-
+console.log(mergeSortedArr(arrayFive, arraySix));
 
