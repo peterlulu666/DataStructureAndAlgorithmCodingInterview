@@ -47,7 +47,36 @@ function firstRecurringCharacter(array) {
 
 }
 
-console.log(firstRecurringCharacter(array));      
+// Create a hashMap
+// If hashMap[array[i]] is undefined let hashMap[array[i]] equal to true
+// If hashMap[array[i]] is not undefined return array[i]
+
+
+function firstRecurringNumber(array) {
+    var hashMap = {};
+    for (let i = 0; i < array.length; i++) {
+        // If the hashMap[array[i]] is not undefined
+        // If the array[i] is in hashMap
+        if (hashMap[array[i]]) {
+            return array[i];
+
+        }
+            // If the hashMap[array[i]] is undefined
+        // If the array[i] is not in hashMap
+        else {
+            hashMap[array[i]] = true;
+
+        }
+
+    }
+    // Return undefined
+    return undefined;
+
+}
+
+console.log(firstRecurringCharacter(array));
+console.log(firstRecurringNumber(array));
+
 
 //Bonus... What if we had this:
 // [2,5,5,2,3,5,1,2,4]
