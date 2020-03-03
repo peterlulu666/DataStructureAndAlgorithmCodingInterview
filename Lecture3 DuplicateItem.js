@@ -42,6 +42,9 @@ function duplicateItem() {
 
 duplicateItem();
 
+// Add arrayOne data to hashMap
+// Check if arrayTwo key is in hashMap
+
 // Create a hashMap
 // 'a' 'b' 'c' are the key
 // true and false are value
