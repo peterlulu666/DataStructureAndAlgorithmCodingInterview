@@ -20,10 +20,7 @@ var array = [2, 5, 5, 2, 3, 5, 1, 2, 4];
 function firstRecurringCharacter(array) {
     var count = {};
     for (let i = 0; i < array.length; i++) {
-        if (count[array[i]] === 2) {
-            break;
-
-        } else if (!(array[i] in count)) {
+        if (!(array[i] in count)) {
             count[array[i]] = 1;
 
         } else {
@@ -50,8 +47,7 @@ function firstRecurringCharacter(array) {
 
 }
 
-console.log(firstRecurringCharacter(array));
-
+console.log(firstRecurringCharacter(array));      
 
 //Bonus... What if we had this:
 // [2,5,5,2,3,5,1,2,4]
