@@ -14,6 +14,7 @@
 // If array[i] is not in the hashMap add the array[i] as the key and let the value equal to 1
 // If array[i] is in the hashMap increment the value
 // If count[array[i] === 2] jump out the for loop
+// Check if the count[key] is 2 return the key
 
 var array = [2, 5, 5, 2, 3, 5, 1, 2, 4];
 
