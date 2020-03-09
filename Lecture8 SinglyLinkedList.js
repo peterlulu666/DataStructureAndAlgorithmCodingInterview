@@ -222,6 +222,49 @@ class LinkedList {
 
     }
 
+    reverse() {
+        // Check if the list is empty
+        if (this.length === 0) {
+            return null;
+
+        }
+
+        // The list has one node
+        // Check if head.next is null
+        // Check if head.next is not exist
+        if (!this.head.next) {
+            return this.head.value;
+
+        }
+
+        // 1 <- 2 <- 3 -> 4 -> 5
+        // Declare first and store the address of head pointer to the first
+        var first = this.head;
+        // Declare second and store the first.next to the second
+        var second = first.next;
+        // Move the first and the second
+        while (second) {
+            // Declare the temp
+            var temp = second.next;
+            // Let the second.next point to the first
+            second.next = first;
+            // Move the first
+            first = second;
+            // Move the second
+            second = temp;
+
+        }
+
+        // Move the tail pointer to the last node
+        this.tail = this.head;
+        // Let the tail.next point to null
+        this.tail.next = null;
+        // Move the head pointer to the first node
+        this.head = first;
+
+
+    }
+
     show() {
         //Copy the head pointer and store the address to tmpPointer
         var tmpPointer = this.head;
@@ -256,8 +299,13 @@ myLinkedList.append(16);
 myLinkedList.append(20);
 myLinkedList.prepend(1);
 myLinkedList.insert(3, 6);
-myLinkedList.remove(6);
 myLinkedList.show();
+myLinkedList.remove(5);
+myLinkedList.show();
+myLinkedList.reverse();
+myLinkedList.show();
+
+
 
 
 
